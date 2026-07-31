@@ -5,10 +5,14 @@ spring:
   application:
     name: sistema-gestion-tareas
 
+  autoconfigure:
+    exclude:
+      - org.springdoc.core.configuration.SpringDocDataRestConfiguration
+
   datasource:
     url: jdbc:postgresql://localhost:5432/sistematareas
-    username: postgres # Reemplaza por tu usuario real de Postgres
-    password: hola123 # Reemplaza por tu contraseña real
+    username: postgres
+    password: hola123
     driver-class-name: org.postgresql.Driver
 
   jpa:
